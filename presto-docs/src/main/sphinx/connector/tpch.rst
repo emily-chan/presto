@@ -51,8 +51,12 @@ Every TPCH schema provides the same set of tables. Some tables are
 identical in all schemas. Other tables vary based on the *scale factor*
 which is determined based on the schema name. For example, the schema
 ``sf1`` corresponds to scale factor ``1`` and the schema ``sf300``
-corresponds to scale factor ``300``. The TPCH connector provides an
-infinite number of schemas for any scale factor which includes floating-point values,
+corresponds to scale factor ``300``. Scale factor indicates the total bytes
+used to represent the entire set of tables. For example, ``sf1`` means that
+across approximately 10 tables that TPCH has, writing them all to disk uncompressed
+would consume approximately 1GB, ``sf100`` would be approximately 100GB, and so forth.
+The TPCH connector provides an infinite number of schemas
+for any scale factor which includes floating-point values,
 not just the few common ones listed by ``SHOW SCHEMAS``.
 The ``tiny`` schema is an alias for scale factor ``0.01``,
 which is a very small data set useful for testing.
