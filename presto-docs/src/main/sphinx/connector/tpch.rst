@@ -60,6 +60,9 @@ not just the few common ones listed by ``SHOW SCHEMAS``.
 The ``tiny`` schema is an alias for scale factor ``0.01``,
 which is a very small data set useful for testing.
 
+For more information, review the `TPCH Specification document <https://www.tpc.org/TPC_Documents_Current_Versions/pdf/TPC-H_v3.0.1.pdf>`_.
+In section 1.2 of the document, the TPCH schemas are provided.
+
 Schema Scale Factors and Corresponding Table Row Counts
 -------------------------------------------------------
 Example query to return row counts from schema ``sf1`` and table ``customer``:
